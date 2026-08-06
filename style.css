@@ -1,0 +1,419 @@
+*{
+    margin: 0;  /* kutuların kenar boşluklarını sıfırlar */
+    padding: 0; /* kutuların iç boşluklarını sıfırlar */
+    box-sizing: border-box;
+}  
+body{
+    font-family: Arial, sans-serif;
+    background-color: hwb(30 95% 4%);
+}
+nav{
+    display: flex; /*Elamanları yan yana dizer*/
+    justify-content: space-between; /*Elamanlar arasındaki boşluğu eşitler*/
+    align-items: center; /*Elamanları dikeyde ortalar*/
+    padding: 20px 60px; /*Üst ve alt boşluk 20px, sağ ve sol boşluk 60px*/
+
+}
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+nav a{
+text-decoration:none; /*link alt çizgilerini kaldırır*/
+color:hwb(0 42% 57%);
+}
+
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: hwb(206 25% 12%);
+}
+.hero{
+    background-color: #ccefff;
+    text-align: center;
+    padding: 100px 20px;
+}
+.hero h1{
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.hero p{
+    font-size: 20px;
+    color:#555;
+    margin-bottom: 30px;
+}
+.hero button{
+    background-color: #4CAF50;
+    color:white;
+    border:none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor:pointer;
+    border-radius: 8px;
+}
+.hero button:hover{
+    background-color: #3d8b40;
+}
+.popular{
+    padding:60px;
+}
+.cards{
+    display:flex; /*kartları yanyana dizer*/
+    gap: 25px;
+    justify-content: center; /*kartları ortalar*/
+    flex-wrap:wrap; /*kartlar sığmazsa alt satıra geçer*/
+    margin-top: 30px;
+}
+.card{
+    background-color:#ffa640;
+    width:280px;
+    padding:20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1); /*hafif gölge*/
+    text-align: center;
+    border:1px solid hsl(26, 67%, 53%);
+}
+.card:hover{
+    transform: translateY(-8px);
+    transition: .3s;
+}
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /*resmin orjinal boyutunu korur*/
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: .3s;
+}
+.card h3{
+    font-size: 24px;
+    color:#1e3a8a;
+    margin-bottom: 15px;
+}
+.card p{
+    color:hsl(0, 100%, 98%);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.card a{
+    display:inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color:white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.ages{
+    padding: 60px;
+    text-align:center;
+}
+.age-list{
+     display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+.age-card{
+     background:white;
+    width:240px;
+    min-height: 180px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+.age-card:hover{
+    transform:translateY(-8px);
+}
+.blog{
+    padding:60px;
+    text-align:center;
+}
+
+
+.blog h2{
+    font-size:32px;
+    color:#333;
+    margin-bottom:30px;
+}
+
+
+.blog-list{
+
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+
+}
+
+
+.blog-card{
+
+    background:white;
+    width:320px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    text-align:left;
+    transition:.3s;
+
+}
+
+
+.blog-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.blog-card h3{
+
+    color:#1e3a8a;
+    font-size:22px;
+    margin-bottom:15px;
+
+}
+
+
+.blog-card p{
+
+    color:#555;
+    line-height:1.6;
+    margin-bottom:15px;
+
+}
+
+
+.blog-card .author{
+
+    color:#4CAF50;
+    font-weight:bold;
+
+}
+
+
+.blog-content{
+
+    display:none; /* HTML'de var olmasına rağmen ekranda görünmez.*/
+
+}
+
+
+.read-more{
+
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+
+}
+
+
+.read-more:hover{
+
+    background:#3d8b40;
+
+}
+.cartoon-detail{
+    max-width:1100px;
+    margin:60px auto;
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+    padding:20px;
+}
+
+.cartoon-detail img{
+    width:320px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.detail-text{
+    flex:1;
+}
+
+.detail-text h1{
+    margin-bottom:20px;
+}
+
+.detail-text p{
+    margin:12px 0;
+    line-height:1.7;
+}
+
+.detail-text ul{
+    margin:15px 0 25px 20px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 22px;
+    background:#4CAF50;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:hwb(123 22% 44%);
+}
+.age-card{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* yaş gruplarını renklendirme */
+.age-header {
+
+    max-width: 1100px;
+
+    margin: 50px auto 30px;
+
+    padding: 40px;
+
+    background: linear-gradient(135deg, #fff4cc, #fff8e7);
+
+    border-radius: 25px;
+
+    text-align: center;
+
+}
+
+
+.age-header h1 {
+
+    font-size: 42px;
+
+    color: #ff8c00;
+
+    margin-bottom: 20px;
+
+}
+
+
+.age-header p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #555;
+
+}
+.age-box {
+
+
+    max-width: 1000px;
+
+    margin: 25px auto;
+
+    padding: 30px;
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+
+    transition:0.3s;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+
+}
+
+
+.age-box:hover {
+
+    transform:translateY(-5px);
+
+}
+.age-box h2 {
+
+
+    color:#3182ce;
+
+
+    font-size:26px;
+
+
+    margin-bottom:15px;
+
+
+}
+.age-box ul {
+
+    padding-left:25px;
+
+}
+
+
+.age-box li {
+
+    margin-bottom:12px;
+
+    font-size:17px;
+
+    color:#444;
+   
+
+}
+footer {
+
+    margin-top:60px;
+
+    padding:25px;
+
+    text-align:center;
+
+    background:#2d3748;
+
+    color:white;
+
+}
+@media(max-width:768px){
+
+
+.age-header{
+
+    margin:20px;
+
+    padding:25px;
+
+}
+
+
+.age-header h1{
+
+    font-size:32px;
+
+}
+
+
+.age-box{
+
+    margin:20px;
+
+    padding:20px;
+
+}
+
+
+}
