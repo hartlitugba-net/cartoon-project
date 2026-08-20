@@ -1,419 +1,525 @@
 *{
-    margin: 0;  /* kutuların kenar boşluklarını sıfırlar */
-    padding: 0; /* kutuların iç boşluklarını sıfırlar */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}  
+}
+
+
+
 body{
     font-family: Arial, sans-serif;
-    background-color: hwb(30 95% 4%);
+    background: #FFF8E7;
+    color: #334155;
 }
+
+
 nav{
-    display: flex; /*Elamanları yan yana dizer*/
-    justify-content: space-between; /*Elamanlar arasındaki boşluğu eşitler*/
-    align-items: center; /*Elamanları dikeyde ortalar*/
-    padding: 20px 60px; /*Üst ve alt boşluk 20px, sağ ve sol boşluk 60px*/
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 10;
 }
+
 nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
-nav a{
-text-decoration:none; /*link alt çizgilerini kaldırır*/
-color:hwb(0 42% 57%);
-}
-
-
-.logo{
-    font-size: 24px;
-    font-weight: bold;
-    color: hwb(206 25% 12%);
-}
-.hero{
-    background-color: #ccefff;
-    text-align: center;
-    padding: 100px 20px;
-}
-.hero h1{
-    font-size: 48px;
-    color: #333;
-    margin-bottom: 20px;
-}
-.hero p{
-    font-size: 20px;
-    color:#555;
-    margin-bottom: 30px;
-}
-.hero button{
-    background-color: #4CAF50;
-    color:white;
-    border:none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor:pointer;
-    border-radius: 8px;
-}
-.hero button:hover{
-    background-color: #3d8b40;
-}
-.popular{
-    padding:60px;
-}
-.cards{
-    display:flex; /*kartları yanyana dizer*/
+    display: flex;
     gap: 25px;
-    justify-content: center; /*kartları ortalar*/
-    flex-wrap:wrap; /*kartlar sığmazsa alt satıra geçer*/
-    margin-top: 30px;
+    list-style: none;
 }
-.card{
-    background-color:#ffa640;
-    width:280px;
-    padding:20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.1); /*hafif gölge*/
-    text-align: center;
-    border:1px solid hsl(26, 67%, 53%);
-}
-.card:hover{
-    transform: translateY(-8px);
+
+nav a{
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
     transition: .3s;
 }
+
+nav a:hover{
+    color: #3182CE;
+}
+
+.logo{
+    font-size: 26px;
+    font-weight: bold;
+    color: #3182CE;
+}
+
+
+
+.hero{
+    background: linear-gradient(135deg, #FFF4CC, #DDF3FF);
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 0 0 30px 30px;
+}
+
+.hero h1{
+    font-size: 48px;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+
+.discover-btn{
+    display: inline-block;
+    background: #62C370;
+    color: white;
+    text-decoration: none;
+    padding: 16px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.discover-btn:hover{
+    background: #4FAF5D;
+    transform: translateY(-3px);
+}
+
+
+
+.popular{
+    padding: 60px;
+    text-align: center;
+}
+
+.popular h2{
+    font-size: 32px;
+    color: #3182CE;
+    margin-bottom: 10px;
+}
+
+.cards{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card{
+    background: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    text-align: center;
+    border: 2px solid #FFE4A8;
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
 .card img{
     width: 100%;
     height: 180px;
-    object-fit: cover; /*resmin orjinal boyutunu korur*/
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
-    transition: .3s;
 }
+
 .card h3{
     font-size: 24px;
-    color:#1e3a8a;
+    color: #3182CE;
     margin-bottom: 15px;
 }
+
 .card p{
-    color:hsl(0, 100%, 98%);
+    color: #555;
     margin-bottom: 10px;
     font-size: 16px;
 }
+
 .card a{
-    display:inline-block;
+    display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color:white;
+    background-color: #62C370;
+    color: white;
     text-decoration: none;
     border-radius: 6px;
+    transition: .3s;
 }
+
+.card a:hover{
+    background: #4FAF5D;
+}
+
+
+
 .ages{
     padding: 60px;
-    text-align:center;
+    text-align: center;
 }
+
+.ages h2{
+    font-size: 32px;
+    color: #3182CE;
+}
+
 .age-list{
-     display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-    gap:25px;
-    flex-wrap:wrap;
-    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
+
 .age-card{
-     background:white;
-    width:240px;
+    background: white;
+    width: 240px;
     min-height: 180px;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
-}
-.age-card:hover{
-    transform:translateY(-8px);
-}
-.blog{
-    padding:60px;
-    text-align:center;
-}
-
-
-.blog h2{
-    font-size:32px;
-    color:#333;
-    margin-bottom:30px;
-}
-
-
-.blog-list{
-
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-
-}
-
-
-.blog-card{
-
-    background:white;
-    width:320px;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    text-align:left;
-    transition:.3s;
-
-}
-
-
-.blog-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-.blog-card h3{
-
-    color:#1e3a8a;
-    font-size:22px;
-    margin-bottom:15px;
-
-}
-
-
-.blog-card p{
-
-    color:#555;
-    line-height:1.6;
-    margin-bottom:15px;
-
-}
-
-
-.blog-card .author{
-
-    color:#4CAF50;
-    font-weight:bold;
-
-}
-
-
-.blog-content{
-
-    display:none; /* HTML'de var olmasına rağmen ekranda görünmez.*/
-
-}
-
-
-.read-more{
-
-    background:#4CAF50;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:6px;
-    cursor:pointer;
-    font-size:15px;
-
-}
-
-
-.read-more:hover{
-
-    background:#3d8b40;
-
-}
-.cartoon-detail{
-    max-width:1100px;
-    margin:60px auto;
-    display:flex;
-    gap:40px;
-    align-items:flex-start;
-    padding:20px;
-}
-
-.cartoon-detail img{
-    width:320px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-}
-
-.detail-text{
-    flex:1;
-}
-
-.detail-text h1{
-    margin-bottom:20px;
-}
-
-.detail-text p{
-    margin:12px 0;
-    line-height:1.7;
-}
-
-.detail-text ul{
-    margin:15px 0 25px 20px;
-}
-
-.back-btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 22px;
-    background:#4CAF50;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    transition:.3s;
-}
-
-.back-btn:hover{
-    background:hwb(123 22% 44%);
-}
-.age-card{
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    transition: .3s;
     text-decoration: none;
     color: inherit;
 }
 
-/* yaş gruplarını renklendirme */
-.age-header {
+.age-card:hover{
+    transform: translateY(-8px);
+    border: 2px solid #FFD27F;
+}
 
-    max-width: 1100px;
-
-    margin: 50px auto 30px;
-
-    padding: 40px;
-
-    background: linear-gradient(135deg, #fff4cc, #fff8e7);
-
-    border-radius: 25px;
-
+.blog{
+    padding: 60px;
     text-align: center;
-
 }
 
-
-.age-header h1 {
-
-    font-size: 42px;
-
-    color: #ff8c00;
-
-    margin-bottom: 20px;
-
+.blog h2{
+    font-size: 32px;
+    color: #3182CE;
+    margin-bottom: 30px;
 }
 
+.blog-list{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
 
-.age-header p {
+.blog-card{
+    background: white;
+    width: 320px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    text-align: left;
+    transition: .3s;
+}
 
-    font-size: 18px;
+.blog-card:hover{
+    transform: translateY(-8px);
+}
 
-    line-height: 1.8;
+.blog-card h3{
+    color: #3182CE;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
 
+.blog-card p{
     color: #555;
-
-}
-.age-box {
-
-
-    max-width: 1000px;
-
-    margin: 25px auto;
-
-    padding: 30px;
-
-
-    background:white;
-
-
-    border-radius:20px;
-
-
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-
-
-    transition:0.3s;
-    background: linear-gradient(135deg, #e0f7fa, #ffffff);
-
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-
-.age-box:hover {
-
-    transform:translateY(-5px);
-
+.blog-card .author{
+    color: #62C370;
+    font-weight: bold;
 }
-.age-box h2 {
 
-
-    color:#3182ce;
-
-
-    font-size:26px;
-
-
-    margin-bottom:15px;
-
-
+.blog-content{
+    display: none;
 }
-.age-box ul {
 
-    padding-left:25px;
+.read-more{
+    background: #62C370;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
 
+.read-more:hover{
+    background: #4FAF5D;
 }
 
 
-.age-box li {
 
-    margin-bottom:12px;
 
-    font-size:17px;
-
-    color:#444;
-   
-
+.cartoon-detail{
+    max-width: 1100px;
+    margin: 60px auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 20px;
 }
-footer {
 
-    margin-top:60px;
-
-    padding:25px;
-
-    text-align:center;
-
-    background:#2d3748;
-
-    color:white;
-
+.cartoon-detail img{
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
 }
-@media(max-width:768px){
+
+.detail-text{
+    flex: 1;
+}
+
+.detail-text h1{
+    margin-bottom: 20px;
+    color: #3182CE;
+}
+
+.detail-text p{
+    margin: 12px 0;
+    line-height: 1.7;
+}
+
+.detail-text ul{
+    margin: 15px 0 25px 20px;
+}
+
+.back-btn{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 22px;
+    background: #62C370;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.back-btn:hover{
+    background: #4FAF5D;
+}
+
 
 
 .age-header{
-
-    margin:20px;
-
-    padding:25px;
-
+    max-width: 1100px;
+    margin: 50px auto 30px;
+    padding: 40px;
+    background: linear-gradient(135deg, #FFF4CC, #FFF8E7);
+    border-radius: 25px;
+    text-align: center;
 }
-
 
 .age-header h1{
-
-    font-size:32px;
-
+    font-size: 42px;
+    color: #FF9F1C;
+    margin-bottom: 20px;
 }
 
+.age-header p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
 
 .age-box{
-
-    margin:20px;
-
-    padding:20px;
-
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: .3s;
 }
 
+.age-box:hover{
+    transform: translateY(-5px);
+}
+
+.age-box h2{
+    color: #3182CE;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.age-box ul{
+    padding-left: 25px;
+}
+
+.age-box li{
+    margin-bottom: 12px;
+    font-size: 17px;
+    color: #444;
+}
+
+
+
+
+.discover-page{
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.discover-page h1{
+    font-size: 42px;
+    color: #3182CE;
+    margin-bottom: 15px;
+}
+
+.discover-page p{
+    font-size: 18px;
+    color: #555;
+}
+
+
+.age-category{
+    max-width: 1100px;
+    margin: 30px auto 60px;
+    padding: 0 20px;
+}
+
+.category-banner{
+    background: linear-gradient(135deg, #FFF4CC, #FFE8A3);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.06);
+}
+
+.category-banner h2{
+    font-size: 30px;
+    color: #FF9F1C;
+    margin-bottom: 10px;
+}
+
+.category-banner p{
+    color: #555;
+    font-size: 17px;
+}
+
+
+
+.discover-cards{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.discover-card{
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    text-align: center;
+    transition: .3s;
+    border: 2px solid #FFE4A8;
+}
+
+.discover-card:hover{
+    transform: translateY(-8px);
+}
+
+.discover-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.discover-card h3{
+    font-size: 23px;
+    color: #3182CE;
+    margin-bottom: 10px;
+}
+
+.discover-card p{
+    color: #555;
+}
+
+
+
+   FOOTER
+========================= */
+
+footer{
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    background: #334155;
+    color: white;
+}
+
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav ul{
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero{
+        padding: 70px 20px;
+    }
+
+    .hero h1{
+        font-size: 36px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+
+    .popular,
+    .ages,
+    .blog{
+        padding: 40px 20px;
+    }
+
+    .age-header{
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .age-header h1{
+        font-size: 32px;
+    }
+
+    .age-box{
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .discover-page h1{
+        font-size: 34px;
+    }
+
+    .age-category{
+        margin-bottom: 40px;
+    }
 
 }
